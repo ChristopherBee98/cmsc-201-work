@@ -1,0 +1,46 @@
+Austin Bailey
+2/5/16
+Section 07 for Lectures, Section 10 for Discussions (Didn't know which to put)
+
+Question 1
+1. Take the positive number and divide by one
+2. Increment the one and divide with the new number again
+3. If the remainder is 0, then remember that number
+4. Repeat steps 2 and 3 until incremented number is equal to positive number
+5. If the amount of numbers with a remainder of 0 is more than 2, than it
+is not a prime number.
+6. If the amount of numbers with a remainder of 0 is 2, than it is a prime
+number.
+
+Question 2
+1. Take the given word and count the amount of letters
+2. Put the letters into a list
+3. Compare the first letter with the last letter in the list
+4. If they aren't the same, it isn't a palindrome. Otherwise, increment the
+first letter and decrement the last letter in the list.
+5. Compare those to see if they are the same.
+6. Repeat steps 4 and 5 until the first letter equals the last letter in the
+list.
+7. If all of the checks done in step 5 are true, the word is a palindrome.
+
+Question 3
+1. Take the first card of the stack and look at the number.
+2. Use that number as the current lowest number.
+3. Take the next notecard and look at the number.
+4. Compare the number on the notecard and the current lowest number.
+5. If the number on the notecard is lower than the current lowest number, then
+that number is the new current lowest number.
+6. Repeat steps 3 through 5 until all the notecards have been gone through.
+7. Whatever the current lowest number is is the lowest number in the stack
+of notecards.
+
+Question 4
+1. Take the positive number and set it as the final number.
+2. Start at 1 and multiply it by the number that is 1 above it. The starting
+number (1) is the current number.
+3. Take the product and add it to the final total.
+4. If the current number plus 1 is equal to the final number, then print the
+final total. Otherwise, increment the current number.
+5. Multiply the current number and the number that's one above the current
+number. Add this product to the final total.
+6. Repeat steps 4 and 5 until the condition in step 4 no longer applies.

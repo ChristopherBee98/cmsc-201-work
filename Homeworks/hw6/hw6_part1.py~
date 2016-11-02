@@ -1,0 +1,29 @@
+#File: hw6_part1.py
+#Author: Austin Bailey
+#Date: 3/25/2016
+#Section: 10
+#E-mail: baustin1@umbc.edu
+#Description: Program will read in numbers and add them to a list.
+
+def main():
+    check1 = 0
+    List = []
+    firstNumber = int(input("Please enter a number: "))
+    List.append(firstNumber)
+    while (check1 == 0):
+        check2 = 0
+        inputNumber = int(input("Please enter a number: "))
+        print(List)
+        for g in range(0, len(List)):
+            if (List[g] != inputNumber):
+                check2 += 1
+                if (check2 == len(List)):
+                    List.append(inputNumber)
+                    if (len(List) == 8):
+                        check1 += 1
+            elif (List[g] == inputNumber):
+                print("The number " + str(List[g]) + " is already in the list.")
+    print("The contents of the list are: ")
+    for h in range(0, len(List)):
+        print(List[h])
+main()

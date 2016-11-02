@@ -1,0 +1,11 @@
+#File: hw3_part3.py
+#Author: Austin Bailey
+#Date: 2/20/2016
+#Lab Section: 10
+#UMBC email: baustin1@umbc.edu
+#Description: This program will let the user play a guess who like game.
+
+def main():
+    print("Please enter 'y' for yes and 'n' for no to these questions.")
+    isWoman = str(input("Is your character a woman? (y/n) "))
+    

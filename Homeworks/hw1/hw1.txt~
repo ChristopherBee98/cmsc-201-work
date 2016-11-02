@@ -1,0 +1,13 @@
+Austin Bailey
+2/5/16
+Section 07 for Lectures, Section 10 for Discussions (Didn't know which to put)
+
+Question 1
+1. Take the positive number and divide by one
+2. Increment the one and divide with the new number again
+3. If the remainder is 0, then remember that number
+4. Repeat steps 2 and 3 until incremented number is equal to positive number
+5. If the amount of numbers with a remainder of 0 is more than 2, than it
+is not a prime number.
+6. If the amount of numbers with a remainder of 0 is 2, than it is a prime
+number.

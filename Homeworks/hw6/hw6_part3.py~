@@ -1,0 +1,54 @@
+#File: hw6_part3.py
+#Author: Austin Bailey
+#Date: 3/26/16
+#Section: 10
+#E-mail: baustin1@umbc.edu
+#Description: This program will build shapes.
+
+def drawTriangle(number):
+    for g in range(0, number):
+        print("*" + (g * "*"))
+    print("")
+def drawParallelogram(number):
+    counter = '*' * number
+    for g in range(0, number):
+        if (g == 0):
+            print(counter)
+        elif (g == 1):
+            print(' ' + counter)
+        else:
+            print((g * ' ') + counter)
+    print("")
+def drawSquare(number):
+    counter = '*' * number
+    for g in range(0, number):
+        print(counter)
+    print("")
+def main():
+    check1 = 0
+    check2 = 0
+    inputNumber = int(input("Please enter a positive integer: "))
+    if (inputNumber <= 0):
+        while (check1 == 0):
+            inputNumber = int(input("Please enter a positive integer: "))
+            if (inputNumber > 0):
+                check1 += 1
+    inputShape = str(input("Please choose the shape: square, parallelogram, triangle, or all: "))
+    if (inputShape == 'square' or inputShape == 'parallelogram' or inputShape == 'triangle' or inputShape == 'all'):
+        check2 += 1
+    else:
+        while (check2 == 0):
+            inputShape = str(input("Please choose the shape: square, parallelogram, triangle, or all: "))
+            if (inputShape == 'square' or inputShape == 'parallelogram' or inputShape == 'triangle' or inputShape == 'all'):
+                check2 += 1
+    if (inputShape == 'square'):
+        drawSquare(inputNumber)
+    if (inputShape == 'parallelogram'):
+        drawParallelogram(inputNumber)
+    if (inputShape == 'triangle'):
+        drawTriangle(inputNumber)
+    if (inputShape == 'all'):
+        drawSquare(inputNumber)
+        drawParallelogram(inputNumber)
+        drawTriangle(inputNumber)
+main()

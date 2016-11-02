@@ -1,0 +1,41 @@
+#File: hw7_part2.py
+#Author: Austin Bailey
+#Date: 4/3/2016
+#Section: 10
+#E-mail: baustin1@umbc.edu
+#Description: Converting UMBC dollars.
+RETRIEVER_BUX = 0.125
+US_DOLLAR = 8
+
+def usaToRetriever(amountUSA):
+    newAmount = amountUSA * US_DOLLAR
+    newAmount = format(newAmount, '.2f')
+    print("Amount of Retriever Bux is: ", newAmount)
+    print("Thanks for using Currency Converter!")
+def retrieverToUsa(amountRetriever):
+    newAmount = amountRetriever * RETRIEVER_BUX
+    newAmount = format(newAmount, '.2f')
+    print("Amount of US Dollars is: ", newAmount)
+    print("Thanks for using Currency Converter!")
+def main():
+    check = 0
+    print("Welcome to the Currency Converter!")
+    print("What would you like to do?")
+    print("1. Convert US Dollars to Retriever Bux")
+    print("2. Convert Retriever Bux to US Dollars")
+    print("3. Exit")
+    while (check == 0):
+        choice = int(input("Enter your choice: "))
+        if ((choice > 3) or (choice < 1)):
+            print("Invalid choice.")
+        else:
+            check += 1
+    if (choice == 1):
+        money = float(input("How much do you want to convert? "))
+        usaToRetriever(money)
+    elif (choice == 2):
+        money = float(input("How much do you want to convert? "))
+        retrieverToUsa(money)
+    else:
+        print("Thanks for using Currency Converter!")
+main()

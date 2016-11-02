@@ -1,0 +1,12 @@
+#File: hw4_part3.py
+#Author: Austin Bailey
+#Date: 2/27/2016
+#Section: 10
+#UMBC email: baustin1@umbc.edu
+#Description: This program will calculate plunges.
+
+def main():
+    pledgeAmount = int(input("How many pledges did you get? "))
+    for g in range(1, pledgeAmount + 1):
+        donation(g) = float(input("What is the value of donation " + str(g) + ": "))
+main()

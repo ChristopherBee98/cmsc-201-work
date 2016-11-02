@@ -1,0 +1,38 @@
+#File: hw6_part2.py
+#Author: Austin Bailey
+#Date: 3/26/2016
+#Section: 10
+#E-mail: baustin1@umbc.edu
+#Description: This program will compute the prime numbers up to 500.
+
+def numberRemoval(List): 
+    check = 0 #Counter for the while loop
+    g = 0 #Checks the place in the list
+    x = 2 #Starting point for the modulus calculation
+    while (check == 0):
+        if (g == len(List)): #If the counter reaches the end of the list, it restarts at the beginning and moves up with the modulus operator
+            g = 0
+            x += 1
+        elif ((List[g] % x) == 0): #Checks if the current number is a multiple of whatever x currently is
+            if (List[g] == 2 or List[g] == 3 or List[g] == 5 or List[g] == 7 or List[g] == 11 or List[g] == 13 or List[g] == 17 or List[g] == 19 or List[g] == 23):
+                g += 1 #If the prime numbers in the first 25 numbers are a multiple, then they are ignored
+            else:
+                List.remove(List[g]) #Removes the number from the list
+        elif (x == 26):
+            check += 1 #When x reaches 26, the while loop ends
+        else:
+            g += 1 #If the modulus isn't fulfilled it moves on to the next number
+    return List
+def main():
+    check = 0
+    x = 2
+    numberList = []
+    while (check == 0): #Creates a list between 2 and 500
+        numberList.append(x)
+        x += 1
+        if (len(numberList) == 499):
+            check += 1
+    newList = numberRemoval(numberList) #Takes the newly formed prime number list and assigns it to newList
+    for h in range(0, len(newList)):
+        print(newList[h], end = " ") #Prints out the new list
+main()

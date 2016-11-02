@@ -1,0 +1,31 @@
+#File: gpa_calculator.py
+#Author: Austin Bailey
+#Date: 4/5/16
+#Section: 10
+#E-mail: baustin1@umbc.edu
+#Description: Calculates gpa.
+
+def convertLetter(letter):
+    if letter == "A":
+        return 4
+    elif letter == "B":
+        return 3
+    elif letter == "C":
+        return 2
+    elif letter == "D":
+        return 1
+    else:
+        return 0
+
+def main():
+    myFile = open("grades.txt", "r")
+    resultsFile = open("results.txt", "w")
+    readingFiles = myFile.readlines()
+    readingFiles = readingFiles.strip()
+    for g in readingFiles:
+        fname, lname, grade1, grade2, grade3 = g.split(";")
+        print(fname, lname, "GPA is:", ((convertLetter(grade1)+convertLetter(grade2)+convertLetter(grade3))/3))
+        resultsFile.write(fname + " " + lname + " " + "GPA is: " + str(((convertLetter(grade1)+convertLetter(grade2)+convertLetter(grade3))/3)) + "\n")
+    myFile.close()
+    resultsFile.close()
+main()
